@@ -32,7 +32,7 @@ struct SmaCanMessage0x035A {
 };
 
 struct SmaCanMessage0x035E {
-  char Model[8];
+  char Model[6];
 };
 
 struct SmaCanMessage0x035F {
