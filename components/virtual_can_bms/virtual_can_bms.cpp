@@ -106,12 +106,12 @@ void VirtualCanBms::send_frame_0x035e_() {
   //  ESP_LOGW(TAG, "One of the required sensor states is NaN. Unable to populate 0x0355 frame. Skipped");
   //  return;
   //}
-
-  message.Model[0] = "P";
-  message.Model[1] = "Y";
-  message.Model[2] = "L";                          // 0%...100%
-  message.Model[3] = "O";
-  message.Model[4] = "N";
+ // 50 59 4C 4F 4E
+  message.Model[0] = 0x50;
+  message.Model[1] = 0x59;
+  message.Model[2] = 0x4C;                          // 0%...100%
+  message.Model[3] = 0x4F;
+  message.Model[4] = 0x4E;
 
   //message.StateOfHealth = state_of_health;                          // 0%...100%
   //message.StateOfChargeHighRes = (hires_state_of_charge * 100.0f);  // 0.00%...100.00%
