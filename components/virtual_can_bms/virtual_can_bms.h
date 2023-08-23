@@ -112,6 +112,7 @@ class VirtualCanBms : public PollingComponent {
   void send_frame_0x0355_();
   void send_frame_0x0356_();
   void send_frame_0x035a_();
+  void send_frame_0x035e_();
   void publish_state_(sensor::Sensor *sensor, float value);
 };
 
