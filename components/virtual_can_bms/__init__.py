@@ -14,6 +14,7 @@ CONF_DISCHARGE_CURRENT_LIMIT_ID = "discharge_current_limit_id"
 CONF_DISCHARGE_VOLTAGE_LIMIT_ID = "discharge_voltage_limit_id"
 CONF_STATE_OF_CHARGE_ID = "state_of_charge_id"
 CONF_STATE_OF_HEALTH_ID = "state_of_health_id"
+CONF_MODEL_ID = "model_id"
 CONF_HIRES_STATE_OF_CHARGE_ID = "hires_state_of_charge_id"
 CONF_BATTERY_VOLTAGE_ID = "battery_voltage_id"
 CONF_BATTERY_CURRENT_ID = "battery_current_id"
@@ -26,6 +27,7 @@ SENSORS = [
     CONF_DISCHARGE_VOLTAGE_LIMIT_ID,
     CONF_STATE_OF_CHARGE_ID,
     CONF_STATE_OF_HEALTH_ID,
+    CONF_MODEL_ID,
     CONF_HIRES_STATE_OF_CHARGE_ID,
     CONF_BATTERY_VOLTAGE_ID,
     CONF_BATTERY_CURRENT_ID,
@@ -50,6 +52,7 @@ CONFIG_SCHEMA = cv.All(
             cv.Required(CONF_DISCHARGE_VOLTAGE_LIMIT_ID): cv.use_id(sensor.Sensor),
             cv.Required(CONF_STATE_OF_CHARGE_ID): cv.use_id(sensor.Sensor),
             cv.Required(CONF_STATE_OF_HEALTH_ID): cv.use_id(sensor.Sensor),
+            cv.Required(CONF_MODEL_ID): cv.use_id(sensor.Sensor),
             cv.Optional(CONF_HIRES_STATE_OF_CHARGE_ID): cv.use_id(sensor.Sensor),
             cv.Optional(CONF_BATTERY_VOLTAGE_ID): cv.use_id(sensor.Sensor),
             cv.Optional(CONF_BATTERY_CURRENT_ID): cv.use_id(sensor.Sensor),
