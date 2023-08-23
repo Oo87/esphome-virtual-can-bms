@@ -112,9 +112,9 @@ void VirtualCanBms::send_frame_0x035e_() {
   message.Model[2] = 0x4C;                          // 0%...100%
   message.Model[3] = 0x4F;
   message.Model[4] = 0x4E;
-  message.Model[4] = 0x5F;
-  message.Model[4] = 0x4C;
-  message.Model[4] = 0x56;
+  message.Model[5] = 0x5F;
+  message.Model[6] = 0x4C;
+  message.Model[7] = 0x56;
 
   //message.StateOfHealth = state_of_health;                          // 0%...100%
   //message.StateOfChargeHighRes = (hires_state_of_charge * 100.0f);  // 0.00%...100.00%
