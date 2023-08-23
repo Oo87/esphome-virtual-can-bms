@@ -52,7 +52,7 @@ CONFIG_SCHEMA = cv.All(
             cv.Required(CONF_DISCHARGE_VOLTAGE_LIMIT_ID): cv.use_id(sensor.Sensor),
             cv.Required(CONF_STATE_OF_CHARGE_ID): cv.use_id(sensor.Sensor),
             cv.Required(CONF_STATE_OF_HEALTH_ID): cv.use_id(sensor.Sensor),
-            cv.Required(CONF_MODEL_ID): cv.use_id(sensor.Sensor),
+            #cv.Required(CONF_MODEL_ID): cv.use_id(sensor.Sensor),
             cv.Optional(CONF_HIRES_STATE_OF_CHARGE_ID): cv.use_id(sensor.Sensor),
             cv.Optional(CONF_BATTERY_VOLTAGE_ID): cv.use_id(sensor.Sensor),
             cv.Optional(CONF_BATTERY_CURRENT_ID): cv.use_id(sensor.Sensor),
