@@ -113,16 +113,16 @@ void VirtualCanBms::send_frame_0x035e_() {
   message.Model[3] = 0x4F;
   message.Model[4] = 0x4E;
   message.Model[5] = 0x20;
-  //message.Model[6] = 0x20;
-  //message.Model[7] = 0x20;
+  message.Model[6] = 0x20;
+  message.Model[7] = 0x20;
 
   //data: [0x45, 0x6E, 0x65, 0x72, 0x67, 0x79]
-  message.Model[0] = 0x45;
-  message.Model[1] = 0x6E;
-  message.Model[2] = 0x65;                          // 0%...100%
-  message.Model[3] = 0x72;
-  message.Model[4] = 0x67;
-  message.Model[5] = 0x79;
+  //message.Model[0] = 0x45;
+  //message.Model[1] = 0x6E;
+  //message.Model[2] = 0x65;                          // 0%...100%
+  //message.Model[3] = 0x72;
+  //message.Model[4] = 0x67;
+  //message.Model[5] = 0x79;
   //message.Model[6] = 0x20;
   //message.Model[7] = 0x20;
 
@@ -130,7 +130,7 @@ void VirtualCanBms::send_frame_0x035e_() {
   //message.StateOfChargeHighRes = (hires_state_of_charge * 100.0f);  // 0.00%...100.00%
 
   auto *ptr = reinterpret_cast<uint8_t *>(&message);
-  this->canbus->send_data(0x0355, false, false, std::vector<uint8_t>(ptr, ptr + sizeof message));
+  this->canbus->send_data(0x035E, false, false, std::vector<uint8_t>(ptr, ptr + sizeof message));
 }
 
 // Optional
